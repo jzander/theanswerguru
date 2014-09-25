@@ -25,6 +25,7 @@ class DecisionsController < ApplicationController
 	end
 	#	@decisions = Decision.where(user_id: current_user.id)
 	@decisions = current_user.decisions
+	@decision = Decision.new
 	end
 
 	def new
