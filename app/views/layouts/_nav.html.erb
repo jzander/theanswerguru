@@ -28,9 +28,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <%# if current_user %>  
+          <% if current_user %>  
           <li class="navLinks"><a href="/decisions/new">ask <%#= image_tag("guru.png", :class=> "", :alt => "logo") %><span class="gurutx">guru</span></a></li>
         <%# else %>
-        <% if current_user %>  
+      
           <li class="navLinks previ"><a href="/decisions/">my decisions</a></li>
         <% end %>
       </ul>

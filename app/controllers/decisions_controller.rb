@@ -45,7 +45,10 @@ class DecisionsController < ApplicationController
 	decision.user = current_user
 		if decision.save
 	  	redirect_to decisions_path
+	  else
+	  	redirect_to new_decision_path
 		end
+
 	end
 
 	def show
