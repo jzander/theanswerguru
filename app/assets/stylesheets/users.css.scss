@@ -1,0 +1,54 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.signUpForm {
+	margin-top: 2em;
+}
+
+.formTwo {
+	width: 60%;
+}
+
+ .logIn {
+ 	width: 300px;
+ 	height: 250px;
+ 	padding: 1em;
+ 	margin: 0 auto;
+ 	margin-top: 1em !important;
+ }
+
+ .sub {
+ 	margin-bottom: 1.2em !important;
+}
+
+.slideUp{
+	animation-name: slideUp;
+	-webkit-animation-name: slideUp;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;
+
+	visibility: visible !important;			
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(20%);
+	}		
+	100% {
+		transform: translateY(0%);
+	}	
+}
+
+@-webkit-keyframes slideUp {
+	0% {
+		-webkit-transform: translateY(20%);
+	}		
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}

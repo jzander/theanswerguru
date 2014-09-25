@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="answerRateBlock"
+<%#= form_for [@answers] do |y| %>
+	<ul class="listOne">
+
+<%= form_for [@decision, @answer] do |q| %>
+	<% @answers.each do |p| %>
+			<li class="answertxt">For <%= p.text %></li><br />
+			<ul><span class="ratetxt">Factors </span>
+			
+		<% @criteria.each do |z| %>
+			<li class="criteriatxt">Rate <span class="criTxtt"> <%= z.text %></span>
+
+			 for <%= p.text %> <%= q.select :rating,  
+					'<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>'.html_safe %>
+
+			</li>
+
+
+		<% end %>
+
+	</ul> <br />
+	<% end %>
+			
+<%= q.submit :class => "btn btn-default btn-md btn-bluer text-center", value: "calculate" %>			
+<% end %>
+
+</div>
+	
+
+
+	<%#= p.submit :class => "btn btn-default btn-md btn-bluer" %>
+
+
+		<%#= form_for [@decision, @answer] do |q| %>
+
+
+</div>
+
+<br /><br />
+
+

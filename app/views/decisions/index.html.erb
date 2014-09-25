@@ -1,0 +1,38 @@
+<div class="container">
+
+<h1 class="text-center headtxt">My Decisions</h1>
+
+<ul class="decisionsList">
+
+
+<% @decisions.each do |d| %>
+
+	<li>
+		<div class="col-sm-7 decTxt">
+			<%= link_to d.text, decision_criteria_path(d.id) %>
+		</div>
+		<div class="col-sm-1">
+		</div>
+		<div class="col-sm-3">
+			<%= link_to "decide", decision_criteria_path(d.id), :class => "btn pull-right btn-default btn-md btn-green widey spacr" %>
+		</div>
+		<div class="col-sm-1">
+			
+			<%= button_to "", decision_path(d.id), :class => "pull-right btn btn-default btn-md btn-rederer widerrr", method: :delete %>
+			<i class="fa fa-trash-o testtt"></i>
+		</div>
+		<br /><br />
+	</li>
+
+<% end %>
+
+</ul>
+
+<br />
+
+	<div class="addCrit text-center texter">
+		
+		<%= link_to "Add a new decision", new_decision_path if current_user %>
+	</div>
+
+</div>

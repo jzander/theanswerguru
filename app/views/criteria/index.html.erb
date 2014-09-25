@@ -1,0 +1,91 @@
+<div class="container">
+<br />
+<div class="criteriaContent">
+			<div class="dec text-center">
+			<strong>Decision: <%= @decision.text %></strong>
+			</div>
+
+		<div class="importantFactorBox col-xs-12">
+
+
+			<div class="text-center"><h3><strong>List the Important Factors:<br /></strong></h3>10 = Highest Priority</div>
+
+			<ul class="criList">
+			<% @criteria.each do |c| %>
+				<li>
+					<div class="criItem">
+						<div class="col-xs-6 pull-left">
+								<b><%= c.text %></b> <br /><span class="decision"> for <b><%= c.decision.text %></b></span>
+						</div>
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-1 rating text-center">
+							<b> <%= c.importance %></b> <br />
+						</div>
+
+
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-1">
+							
+		
+								<%= button_to "", decision_criterion_path(@decision.id, c.id), :class => "pull-right btn btn-default btn-md btn-rederer widerr fa fa-trash-o", method: :delete %>
+								<i class="fa fa-trash-o test"></i>
+						</div>
+				
+					</div>
+						<br />
+				</li>
+			<% end %>
+			</ul>
+
+		</div>
+
+
+			<div class="addCri text-center">
+
+				<%= form_for [@decision, @criterion] do |oneCriterion| %>
+	
+					<%= oneCriterion.text_field :text, placeholder: "What's a factor for this decision?", :class => "criInputer text-center" %>
+					
+
+						&nbsp;&nbsp;&nbsp;&nbsp;Give this factor a value: <%= oneCriterion.select :importance,  
+							'<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>'.html_safe
+
+						  %>
+						
+
+						  <%= oneCriterion.submit value: "add", :class => "btn btn-default btn-md btn-green wide" %>
+					</div>
+
+	
+				<% end %>
+
+
+
+			</div>
+</div><br />
+
+	<div class="text-center">
+		<div class="row">
+			<div class="col-sm-2">&nbsp;</div>
+			<div class="col-sm-4">	
+				<button onclick="window.location.href='/decisions'" class="btn btn-default btn-md btn-redy">See Previous Decisions</button>
+			</div>
+			<div class="col-sm-4">
+				<%= link_to "Find your answer!", new_decision_answer_path(@decision.id), :class => "btn btn-default btn-md btn-bluey" %>
+			</div>
+			
+			<div class="col-sm-2">&nbsp;</div>
+		</div>
+	</div>
+	<br /><br /><br />
+</div>
+<br /><br />

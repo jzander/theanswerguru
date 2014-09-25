@@ -1,0 +1,85 @@
+<div class="container">
+<div class="criteriaContent">
+<div class="importantFactorBox col-xs-12"> 
+
+			<strong><h1 class="text-center">What are your choices?</h1></strong><br />
+
+			<div class="addCri text-center">
+
+				<%= form_for [@decision, @answer] do |a| %>
+					<div class="col-xs-1"></div>
+					<div class="col-xs-3">
+					<%= a.text_field :text, placeholder: "What is a possible answer for this decision?", :class => "criInputerr text-center" %>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+						</div>
+				
+					<div class="col-xs-3">
+						&nbsp; 
+					</div>
+					<div class="col-xs-4">
+						<%= a.submit :class => "btn btn-default btn-md btn-greeny" %>
+						  
+					</div>
+
+					<br /><br />
+				
+
+			
+					<% end %>
+
+
+			</div>	
+
+			<ul class="criList">
+			<% @answers.each do |a| %>
+				<li>
+					<div class="criItem">
+						<div class="col-xs-2">&nbsp;</div>
+						<div class="col-xs-6 pull-left">
+								<b><%= a.text %></b> <br /><span class="decision"> for the decision <b><%= a.decision.text %></b></span>
+						</div>
+						
+						<div class="col-xs-1 rating text-center">
+						&nbsp;
+						</div>
+						<div class="col-xs-1">
+
+						
+							<%= button_to "", decision_answer_path(@decision.id, a.id), :class => "fa fa-trash-o pull-right btn btn-default btn-md btn-rederer widerr", method: :delete %>
+							<i class="fa fa-trash-o testy"></i>
+
+						</div>
+						<div class="col-xs-2">&nbsp;</div>
+				
+					</div>
+						<br /><br />
+				</li>
+			<% end %>
+			</ul>
+		</div>
+
+</div>
+
+	<div class="text-center">
+
+		<div class="row">
+		</div>
+		<div class="row">
+			<div class="col-sm-2">&nbsp;</div>
+			<div class="col-sm-4">	
+				<button onclick="window.location.href='/decisions'" class="btn btn-default btn-md btn-redy">See Previous Decisions</button>
+			</div>
+
+			<div class="col-sm-4">
+				<%= link_to "Rate your answers!", new_criteria_answer_path(@decision), method: :get, :class => "btn btn-default btn-md btn-bluey" %>
+			</div>
+
+			<div class="col-sm-2">&nbsp;</div>
+
+			
+		</div>
+	</div>
+
+	<br /><br /><br /><br />
+
+</div>

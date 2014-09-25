@@ -1,0 +1,35 @@
+<div class="container">
+
+<div class="text-center"><h3><strong>Rate your choices:<br /></strong></h3>10 = Most Desireable</div>
+
+  <div class="answerRateBlock">
+
+<%= form_for @decision do |f| %>
+  <ul class="listOne">
+  <%= f.fields_for :answers do |ans_builder| %>
+      <li class="answertxt">For <%= ans_builder.object.text %>:<br />
+
+      <%= ans_builder.fields_for :criteria_answers do |crit_builder| %>
+        <li class="criteriatxt">Rate <span class="criTxtt">
+          <%= crit_builder.object.criterion.text %></span>
+          <%#= crit_builder.text_field :rating %>
+          <%= crit_builder.select :rating, [["Select a rating", nil]] + (1..10).map {|n| [n,n]} %>
+        </li>
+    <% end %>
+    </li><br />
+  <% end %>
+  
+  </ul> 
+      
+  <%= f.submit :class => "btn btn-default btn-md btn-bluer text-center", value: "FIND YOUR ANSWER" %>      
+<% end %>
+
+</div>
+
+  <%#= p.submit :class => "btn btn-default btn-md btn-bluer" %>
+
+
+    <%#= form_for [@decision, @answer] do |q| %>
+</div>
+
+<br /><br />

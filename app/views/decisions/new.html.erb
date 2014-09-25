@@ -1,0 +1,33 @@
+<!-- <div class="topBar">
+
+	<button onclick="window.location.href='/decisions'" class="btn btn-default btn-md btn-bluer prev">See Previous Decisions</button>
+
+</div> -->
+<div class="fakebody">
+<div class="container newD text-center">
+
+	<%= image_tag("aglogo.png", :class=> "logoimage fadeIn", :alt => "logo") %>
+
+	<!-- <h1 class="text-center">Let's help you decide.</h1> -->
+
+	<div class="decisionInput text-center">
+		<%= form_for @decision do |f| %>
+			<%= f.text_field :text, :class => "decisionInputTxt fadeIn", placeholder: "What's the decision?" %> <br />
+			<%= f.submit "Answer", :class => "btn fadeIn btn-default btn-md btn-bluerr" %>
+		<% end %>
+
+	</div>
+
+<%= image_tag("desc.png", :class=> "descri fadeIn", :alt => "type a decision above") %>
+
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<span class="pull-left padfot"> &copy; 2015 TheAnswerGuru. All Rights Reserved.</span> 
+<span class="pull-right padfot">Made by Jeremy Zander</span>
+
+</div>

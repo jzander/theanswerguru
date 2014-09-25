@@ -1,0 +1,40 @@
+<nav class="myNavBar navbar navbar-default slideDown" role="navigation" style="border-radius:none !important">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>  
+
+    </div>
+
+     <ul class="nav navbar-nav navbar-right navLinks">
+        <% if current_user %>  
+          <li class="navLinks"><%= button_to "Log out", session_path, method: :delete, :class => "btn btn-default btn-md btn-greene" %></li>
+        <% else %>
+          <li>
+            <%= button_to "Sign up!", new_user_path, method: :get, :class => "btn btn-default btn-md btn-greene" %>
+          </li>
+          <li>
+            <%= button_to "Log in", new_session_path, method: :get, :class => "btn btn-default btn-md btn-greene" %>
+          </li>
+        <% end %>
+      </ul>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <%# if current_user %>  
+          <li class="navLinks"><a href="/decisions/new">ask <%#= image_tag("guru.png", :class=> "", :alt => "logo") %><span class="gurutx">guru</span></a></li>
+        <%# else %>
+        <% if current_user %>  
+          <li class="navLinks previ"><a href="/decisions/">my decisions</a></li>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+

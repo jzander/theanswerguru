@@ -1,0 +1,157 @@
+// Place all the styles related to the criteria controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.addCriterion {
+	width: 100%;
+	margin-top: 10em;
+}
+
+.cri {
+	margin-top: 5em;
+}
+
+.decHead {
+	margin: 0 auto;
+	width: 500px;
+}
+
+.decisionBox {
+	height: 300px;
+	text-align: center;
+	font-size: 2em;
+}
+
+.txtD {
+	text-align: center;
+	font-size: 3em;
+	margin: 0 auto;
+	width: 500px;
+}
+
+.criteriaContent {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.dec {
+	font-size: 2em;
+}
+
+.addCri {
+	margin-top: 0em;
+}
+
+.criInputer {
+	width: 600px;
+	height: 35px;
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+	border-bottom: 2px solid black;
+	margin-bottom: 1em;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: none;
+	margin: none;
+	color: black;
+	font-size: 1.3em;
+	margin-bottom: .3em;
+	text-align: center;
+}
+ 
+.criInputer [type=text]:focus, .criInputer:focus {
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  padding: none;
+  margin: none;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.criInputer:focus {
+	background-color: none;
+	border: none;
+	box-shadow: none;
+	border-bottom: 2px solid black;
+}
+
+
+.criInputer {
+	width: 300px !important;
+}
+
+.criInputerr {
+	width: 600px;
+	height: 35px;
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+	border-bottom: 2px solid black;
+	margin-bottom: 1em;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: none;
+	margin: none;
+	color: black;
+	font-size: 1.05em;
+	margin-bottom: .3em;
+	text-align: center;
+}
+ 
+.criInputerr [type=text]:focus, .criInputerr:focus {
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  padding: none;
+  margin: none;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.criInputerr:focus {
+	background-color: none;
+	border: none;
+	box-shadow: none;
+	border-bottom: 2px solid black;
+}
+
+
+.criInputerr {
+	width: 300px !important;
+}
+
+.criList {
+	margin-top: 1em;
+	font-size: 1.3em;
+	margin-left: -2em;
+	margin-bottom: 3em;
+}
+
+.deleteCri {
+	display: inline;
+	width: 200px;
+}
+
+.criList li {
+	list-style: none;
+}
+
+.criItem {
+	margin-top: 2em;
+}
+
+.decision {
+	font-size: .7em;
+	color: #cfcfcf;
+}
+
+.topmar {
+	margin-top: 2em;
+}
+
+.rating {
+	margin-top: .4em
+}

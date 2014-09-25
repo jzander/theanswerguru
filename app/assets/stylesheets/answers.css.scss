@@ -1,0 +1,51 @@
+// Place all the styles related to the answers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.listOne {
+	list-style: none;
+	font-size: 1em;
+}
+
+.listOne li{
+	list-style: none;
+	list-style: none
+}
+
+.answertxt {
+	font-weight: bold;
+	list-style: none;
+	font-size: 2em;
+	
+}
+
+.answerRateBlock {
+	width: 60%;
+	margin-top: 2em;
+	margin-left: 30%;
+}
+
+.ratetxt {
+	margin-left: -3em;
+	font-weight: bold;
+}
+
+.criteriatxt {
+	list-style: none;
+	margin-top: .5em;
+	margin-left: -1em;
+}
+
+.criTxtt {
+	font-weight: bold;
+}
+
+.ratebtn {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.btnsmy {
+	width: 600px;
+	margin: 0 auto;
+}

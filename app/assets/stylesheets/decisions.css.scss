@@ -1,0 +1,86 @@
+// Place all the styles related to the decisions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.decisionInput {
+	margin-top: 1em;
+}
+
+.decisionInputTxt {
+	width: 500px;
+	height: 35px;
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+	border-bottom: 2px solid white;
+	margin-bottom: 1em;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: none;
+	margin: none;
+	color: white;
+	font-size: 2em;
+	margin-bottom: .3em;
+	text-align: center;
+}
+ 
+.decisionInputTxt [type=text]:focus, .decisionInputTxt:focus {
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  padding: none;
+  margin: none;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.decisionInputTxt:focus {
+	background-color: none;
+	border: none;
+	box-shadow: none;
+	border-bottom: 2px solid white;
+}
+
+.newD {
+	margin-top: 8em;
+}
+
+.decisionsList {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.decisionsList li {
+	list-style: none;
+	font-size: 2em;
+	margin-top: 1em;
+	text-align: left;
+}
+
+.dTxt {
+	color: black;
+}
+
+.decTxt {
+	padding-top: 1em;
+	text-align: left;
+	font-size: .8em;
+
+}
+
+.decTxt a {
+	color: black;
+	font-weight: bold;
+	font-size: 1em;
+	text-decoration: none;
+}
+
+.decTxt a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.addCrit {
+	margin-top: 5em;
+}
